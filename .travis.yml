@@ -22,6 +22,7 @@ deploy:
   on:
     tags: true
     repo: mobilityhouse/watchexec
+install: ci/install.sh
 branches:
   only:
   - master
