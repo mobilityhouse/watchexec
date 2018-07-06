@@ -1,5 +1,6 @@
 # Build script shamelessly stolen from ripgrep :)
 
+rustup target add x86_64-unknown-linux-musl
 cargo build --target $TARGET --release
 
 build_dir=$(mktemp -d 2>/dev/null || mktemp -d -t tmp)
