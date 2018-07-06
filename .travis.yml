@@ -6,10 +6,10 @@ env:
 matrix:
   include:
     - os: linux
-      rust: nightly
+      rust: stable
       env: TARGET=i686-unknown-linux-musl
     - os: linux
-      rust: nightly
+      rust: stable
       env: TARGET=x86_64-unknown-linux-musl
 script:
 - bash ci/script.sh
