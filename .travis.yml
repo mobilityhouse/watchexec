@@ -21,6 +21,10 @@ deploy:
     secure: i9z9xvlrbug2B4MPJd6hQFJAdE/ZywGCRFOsk5uTFCv+L6Kr96K5a7/w4f2uJFI++W9XyqLvJ0UvSg4+KcD7qtXNH4XfaCThc/QeyRK+Gid7WbI5t7Fn+49BZn86HbpWG7rlhGmgwr01ucYQIneIm8hkRTu55H+VUhNog9rGjgfvonRzweDKD/1x/4nnyL1lSw7u98ZvJP9ZBrJlYfQ0tiYoiPl3iXBhN6yPPMfeeJpnT3swh5KqrDq1yOZCVqhCuZX/A7jIzB7d1H3GMVfnCFiUAyfvFCJQArUiPt7jDr4FQyxZxj5C42vYHvINqZk36EW6rM8cco/YWziS8mYbjzuaY8O0rercS1wCmOqjtALWh8aO5y2a4RjIAxPxnKJH4NG295IDS3jav1sgkWO87RYVwmg9O4lcOsslY67W6pwFnu9ozQkG4Mwc6fyv9v8vcxc1KE0LoKCfi21rizNCFhZqpz3k7ATdgvJoi3lN6wbDcRHyStxYkwCuxLuX7QtL50ydZYVj8clSnSJSmMbExPVUTMvb1LwHrtQMEBPZY7Hvc5E4HbQHl9NXD4qnjnJ3SIJFT/49t1ZZB8Az6wyOGuDWkULo27y1S92qBj/nKDaupMsVXbIw3m/z/YBUQduERmfFi8UOO7iPOywrq70xZ2DYm9WdzLYZ1hLqEBd1Jxg=
   on:
     tags: true
+  file_glob: true
+  file: ${PROJECT_NAME}-${TRAVIS_TAG}-${TARGET}.*
+  skip_cleanup: true
+
 install: ci/install.sh
 branches:
   only:
